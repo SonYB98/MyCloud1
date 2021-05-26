@@ -2,7 +2,7 @@
   "name": "mydogcat",
   "version": "1.0.0",
   "description": "Dogs and cats medical",
-  "author": "yongheuicho <yongheuicho@gmail.com>",
+  "author": "syb <sonojong2030@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
