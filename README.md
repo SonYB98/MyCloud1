@@ -1,6 +1,10 @@
-# mycloud2
+# mydogcat
 
-> Nuxt.js project
+> Dogs and cats medical
+
+# Website Domain Name
+
+> https://www.mydogcat.tk/
 
 ## Build Setup
 
@@ -21,4 +25,6 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
-"# MyCloud1" 
+## Netlify Badge
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/14577ce8-1889-4674-b4c2-692f592997f7/deploy-status)](https://app.netlify.com/sites/thirsty-ride-9fcf90/deploys)

@@ -1,8 +1,8 @@
 {
-  "name": "mycloud2",
+  "name": "mydogcat",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "SonYB98 <sonojong2030@naver.com>",
+  "description": "Dogs and cats medical",
+  "author": "yongheuicho <yongheuicho@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
