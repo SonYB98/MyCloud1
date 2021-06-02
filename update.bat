@@ -1,3 +1,3 @@
 git add --all
-git commit -m "add web css"
+git commit -m "add table class"
 git push -u origin master

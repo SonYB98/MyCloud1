@@ -25,6 +25,25 @@
             임시1에 대한 내용
           </div>
         </article>
+        <article class="notification">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>강아지가 주는 신호</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-selected">
+                <td>신호1</td>
+                <td>이러이러한 신호1를 준다는 내용</td>
+              </tr>
+              <tr>
+                <td>신호2</td>
+                <td>이러이러한 신호2를 준다는 내용</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
       </div>
 
       <div class="column">
@@ -33,10 +52,30 @@
             <p>임시2(아직 못정함)</p>
           </div>
           <div class="message-body">
-             <figure class="image is-128x128">
-               <img src="~assets/dog.jpg" alt="" />
-              </figure>
-            임시2에 대한 내용</div>
+            <figure class="image is-128x128">
+              <img src="~assets/dog.jpg" alt="" />
+            </figure>
+            임시2에 대한 내용
+          </div>
+        </article>
+        <article class="notification">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>고양이가 주는 신호</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-selected">
+                <td>신호1</td>
+                <td>이러이러한 신호1를 준다는 내용</td>
+              </tr>
+              <tr>
+                <td>신호2</td>
+                <td>이러이러한 신호2를 준다는 내용</td>
+              </tr>
+            </tbody>
+          </table>
         </article>
       </div>
 
