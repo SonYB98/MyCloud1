@@ -13,16 +13,16 @@
       <div class="column">
         <article class="message">
           <div class="message-header">
-            <p>임시1(아직 못정함)</p>
+            <p>강아지</p>
           </div>
           <div class="message-body">
-            <figure class="image is-128x128">
+            <figure class="image is-256x256">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bulldog_adult_male.jpg/220px-Bulldog_adult_male.jpg"
                 alt=""
               />
             </figure>
-            임시1에 대한 내용
+            강아지들에 대한 내용 , 건강상태체크
           </div>
         </article>
         <article class="notification">
@@ -49,13 +49,13 @@
       <div class="column">
         <article class="message">
           <div class="message-header">
-            <p>임시2(아직 못정함)</p>
+            <p>고양이</p>
           </div>
           <div class="message-body">
-            <figure class="image is-128x128">
-              <img src="~assets/dog.jpg" alt="" />
+            <figure class="image is-256x256">
+              <img src="~assets/cat.jpeg" alt="" />
             </figure>
-            임시2에 대한 내용
+            고양이의 상태체크 내용
           </div>
         </article>
         <article class="notification">
