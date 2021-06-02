@@ -4,7 +4,7 @@
       <div class="hero-body">
         <p class="title">
           <i class="fas fa-dog"></i> 강아지와
-          <i class="fas fa-cat"></i> 고양이의 다양한 이름
+          <i class="fas fa-cat"></i> 고양이의 행동변화
         </p>
         <p class="subtile">아직 어떻게 사용할지 몰라서 같은거로 했습니다.</p>
       </div>
@@ -16,64 +16,57 @@
           <thead>
             <tr>
               <th>번호</th>
-              <th>수컷 강아지 이름</th>
-              <th>암컷 강아지 이름</th>
+              <th>강아지의 행동패턴</th>
+              <th>상태</th>
             </tr>
           </thead>
           <tbody>
-            <template v-for="pos in tableDogMaleNames.length">
+            <template v-for="pos in tabledogStat.length">
               <tr :key="pos">
                 <td>{{ pos }}</td>
-                <td>{{ tableDogMaleNames[pos - 1] }}</td>
-                <td>{{ tableDogFemaleNames[pos - 1] }}</td>
+                <td>{{ tabledogStat[pos - 1] }}</td>
+                <td>{{ tabledogStat2[pos - 1] }}</td>
               </tr>
             </template>
           </tbody>
         </table>
-        <div class="content">
-          <span class="tag is-danger">출처</span>
-          <a href="https://github.com/sindresorhus/dog-names"
-            >sindresorhus/dog-names</a
-          >
-        </div>
       </div>
       <div class="column">
         <table class="table is-striped is-hoverable is-fullwidth">
           <thead>
             <tr>
               <th>번호</th>
-              <th>고양이 이름</th>
+              <th>고양이의 행동패턴</th>
+              <th>상태</th>
             </tr>
           </thead>
           <tbody>
-            <template v-for="pos in tableCatNames.length">
+            <template v-for="pos in tablecatStat.length">
               <tr :key="pos">
                 <td>{{ pos }}</td>
-                <td>{{ tableCatNames[pos - 1] }}</td>
+                <td>{{ tablecatStat[pos - 1] }}</td>
+                <td>{{ tablecatStat2[pos - 1] }}</td>
               </tr>
             </template>
           </tbody>
         </table>
-        <div class="content">
-          <span class="tag is-danger">출처</span>
-          <a href="https://github.com/sindresorhus/cat-names"
-            >sindresorhus/cat-names</a
-          >
-        </div>
       </div>
     </section>
   </div>
 </template>
 <script>
-import dogMaleNames from "~/assets/dogMaleNames.json";
-import dogFemaleNames from "~/assets/dogFemaleNames.json";
-import catNames from "~/assets/catNames.json";
+import catStat from "~/assets/catStat.json";
+import catStat2 from "~/assets/catStat2.json";
+import dogStat from "~/assets/dogStat.json";
+import dogStat2 from "~/assets/dogStat2.json";
+
 export default {
   data() {
     return {
-      tableDogMaleNames: dogMaleNames.names,
-      tableDogFemaleNames: dogFemaleNames.names,
-      tableCatNames: catNames.names,
+      tabledogStat: dogStat.names,
+      tabledogStat2: dogStat2.names,
+      tablecatStat: catStat.names,
+      tablecatStat2: catStat2.names,
     };
   },
 };
