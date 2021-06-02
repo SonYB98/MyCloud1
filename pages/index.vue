@@ -30,6 +30,7 @@
             <thead>
               <tr>
                 <th>강아지가 주는 신호</th>
+                <th>행동내용</th>
               </tr>
             </thead>
             <tbody>
@@ -63,6 +64,7 @@
             <thead>
               <tr>
                 <th>고양이가 주는 신호</th>
+                <th>행동내용</th>
               </tr>
             </thead>
             <tbody>

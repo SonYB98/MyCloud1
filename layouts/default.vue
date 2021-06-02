@@ -5,6 +5,9 @@
         <li>
           <nuxt-link to="/"><i class="fas fa-home"></i>HOME</nuxt-link>
         </li>
+         <li>
+          <nuxt-link to="/dogCatNames"><i class="fas fa-file-signature"></i>&nbsp;이름짓기</nuxt-link>
+        </li>
       </ul>
     </nav>
     <nuxt />
