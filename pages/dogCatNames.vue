@@ -6,7 +6,7 @@
           <i class="fas fa-dog"></i> 강아지와
           <i class="fas fa-cat"></i> 고양이의 다양한 이름
         </p>
-        <p class="subtile">애완동물 이름붙이기.</p>
+        <p class="subtile">아직 어떻게 사용할지 몰라서 같은거로 했습니다.</p>
       </div>
     </section>
     <hr />
