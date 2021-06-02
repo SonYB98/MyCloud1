@@ -6,9 +6,7 @@
           <i class="fas fa-dog"></i> 강아지와
           <i class="fas fa-cat"></i> 고양이의 다양한 이름
         </p>
-        <p class="subtile">
-          애완동물 이름붙이기.
-        </p>
+        <p class="subtile">애완동물 이름붙이기.</p>
       </div>
     </section>
     <hr />
@@ -57,11 +55,11 @@
           </tbody>
         </table>
         <div class="content">
-            <span class="tag is-danger">출처</span>
-            <a href="https://github.com/sindresorhus/cat-names"
-              >sindresorhus/cat-names</a
-            >
-          </div>
+          <span class="tag is-danger">출처</span>
+          <a href="https://github.com/sindresorhus/cat-names"
+            >sindresorhus/cat-names</a
+          >
+        </div>
       </div>
     </section>
   </div>
@@ -75,8 +73,8 @@ export default {
     return {
       tableDogMaleNames: dogMaleNames.names,
       tableDogFemaleNames: dogFemaleNames.names,
-      tableCatNames: catNames.names
+      tableCatNames: catNames.names,
     };
-  }
+  },
 };
 </script>

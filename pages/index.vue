@@ -26,7 +26,9 @@
           </div>
         </article>
         <article class="notification">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <table
+            class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+          >
             <thead>
               <tr>
                 <th>강아지가 주는 신호</th>
@@ -60,7 +62,9 @@
           </div>
         </article>
         <article class="notification">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <table
+            class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+          >
             <thead>
               <tr>
                 <th>고양이가 주는 신호</th>
