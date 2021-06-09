@@ -52,7 +52,7 @@
         </table>
         <div class="content">
 					<p class="tag is-danger">출처</p>
-					<a class="button is-primary is-small" href="/catStat.json"
+					<a class="button is-primary is-small" href="/dogStat.json"
 						>JSON - 상태체크</a
 					><br />
 				</div>

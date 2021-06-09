@@ -14,8 +14,9 @@
 			<table class="table">
 				<thead>
 					<th>번호</th>
-					<th>강아지 품종</th>
-					<th>강아지 아품종</th>
+					<th>간단한 진단 내역</th>
+					<th>애완동물</th>
+                    <th>패턴 변화</th>
 				</thead>
 				<tbody>
 					<template v-for="pos in tableDogKeys.length">
