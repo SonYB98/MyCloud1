@@ -19,28 +19,12 @@
                     <th>패턴 변화</th>
 				</thead>
 				<tbody>
-					<template v-for="pos in tableDogKeys.length">
+					<template v-for="pos in tableStatus.length">
 						<tr :key="pos">
 							<td>{{ pos }}</td>
-							<td>{{ tableDogKeys[pos - 1] }}</td>
-							<td>
-								<span
-									class="tag is-black"
-									v-if="
-										((ar = tableDogBreeds[tableDogKeys[pos - 1]]),
-										ar.length == 0)
-									"
-									>없음</span
-								>
-								<span v-else
-									><template v-for="subbreed in ar"
-										><span class="tag is-success" :key="subbreed">{{
-											subbreed
-										}}</span
-										>&nbsp;</template
-									>
-								</span>
-							</td>
+							<td>{{ tableStatus[pos - 1] }}</td>
+							
+
 						</tr>
 					</template>
 				</tbody>
@@ -62,11 +46,10 @@
 	import axios from 'axios';
 	export default {
 		async asyncData() {
-			const dogBreeds = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
-			//alert(Object.keys(dogBreeds));
+			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
+			console.log(Object.keys(petStat.data))
 			return {
-				tableDogBreeds: dogBreeds.data.message,
-				tableDogKeys: Object.keys(dogBreeds.data.message),
+				tableStatus: petStat.data.message,
 			};
 		},
 	};
