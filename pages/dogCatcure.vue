@@ -13,7 +13,6 @@
 		<div class="column">
 			<table class="table">
 				<thead>
-					<th>번호</th>
 					<th>간단한 진단 내역</th>
 					<th>애완동물</th>
                     <th>패턴 변화</th>
@@ -21,7 +20,6 @@
 				<tbody>
 					<template v-for="pos in tableStatusKey.length">
 						<tr :key="pos">
-							<td>{{ pos }}</td>
 							<td>{{ tableStatus[pos - 1]}}</td>
                             <td>{{ tableStatus2[pos - 1]}}</td>
                             <td>{{ tableStatus3[pos - 1]}}</td>						
@@ -43,13 +41,12 @@
 		async asyncData() {
 			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
             //alert(Object.keys(petStat));
+            console.log(Object.keys(petStat.data.message));
 			return {
 				tableStatus: petStat.data.message,
-                tableStatusKey: Object.Keys(petStat.data.message),
+                tableStatusKey: Object.keys(petStat.data.message),
                 tableStatus2: petStat.data.status,
-                tableStatus2Key: Object.Keys(petStat.data.status),
-                tableStatus3: petStat.data.status2,
-                tableStatus3Key: Object.Keys(petStat.data.status2)
+                tableStatus3: petStat.data.status2
                 
                 
 			};
