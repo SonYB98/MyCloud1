@@ -22,9 +22,9 @@
 					<template v-for="pos in tableStatusKey.length">
 						<tr :key="pos">
 							<td>{{ pos }}</td>
-							<td>{{ tableStatus[pos - 1].message }}</td>
-                            <td>{{ tableStatus2[pos - 1].status }}</td>
-                            <td>{{ tableStatus3[pos - 1].status2 }}</td>						
+							<td>{{ tableStatus[pos - 1]}}</td>
+                            <td>{{ tableStatus2[pos - 1]}}</td>
+                            <td>{{ tableStatus3[pos - 1]}}</td>						
 						</tr>
 					</template>
 				</tbody>
@@ -42,7 +42,7 @@
 	export default {
 		async asyncData() {
 			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
-             //alert(Object.keys(petStat));
+            //alert(Object.keys(petStat));
 			return {
 				tableStatus: petStat.data.message,
                 tableStatusKey: Object.Keys(petStat.data.message),
@@ -53,6 +53,6 @@
                 
                 
 			};
-		},
+		}
 	};
 </script>
