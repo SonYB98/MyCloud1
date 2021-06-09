@@ -62,7 +62,7 @@
 	import axios from 'axios';
 	export default {
 		async asyncData() {
-			const dogBreeds = await axios.get('https://dog.ceo/api/breeds/list/all');
+			const dogBreeds = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
 			//alert(Object.keys(dogBreeds));
 			return {
 				tableDogBreeds: dogBreeds.data.message,
