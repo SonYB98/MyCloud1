@@ -48,8 +48,11 @@
 		async asyncData() {
 			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
 			console.log(Object.keys(petStat.data))
+            console.log(petStat.data.message)
 			return {
 				tableStatus: petStat.data.message,
+                tableStatus2: petStat.data.status,
+                tableStatus3: petStat.data.message
 			};
 		},
 	};
