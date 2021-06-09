@@ -43,14 +43,14 @@
 		async asyncData() {
 			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
              //alert(Object.keys(petStat));
-            console.log(petStat.data.message)
-            console.log(petStat.data.status)
-            console.log(petStat.data.status2)
 			return {
 				tableStatus: petStat.data.message,
+                tableStatusKey: Object.Keys(petStat.data.message),
                 tableStatus2: petStat.data.status,
+                tableStatus2Key: Object.Keys(petStat.data.status),
                 tableStatus3: petStat.data.status2,
-                tableStatusKey: Object.Keys(petStat.data.message)
+                tableStatus3Key: Object.Keys(petStat.data.status2)
+                
                 
 			};
 		},
