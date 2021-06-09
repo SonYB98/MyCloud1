@@ -22,21 +22,16 @@
 					<template v-for="pos in tableStatus.length">
 						<tr :key="pos">
 							<td>{{ pos }}</td>
-							<td>{{ tableStatus[pos - 1] }}</td>
-							
-
+							<td>{{ tableStatus[pos - 1].message }}</td>
+                            <td>{{ tableStatus2[pos - 1].status }}</td>
+                            <td>{{ tableStatus3[pos - 1].status2 }}</td>						
 						</tr>
 					</template>
 				</tbody>
 			</table>
             <div class="content">
 				<p class="tag is-danger">출처</p>
-				<a href="https://dog.ceo/dog-api/documentation/">Dog CEO</a><br />
-				<a
-					class="button is-primary is-small"
-					href="https://dog.ceo/api/breeds/list/all"
-					>List all breeds</a
-				>
+				<a href="https://github.com/SonYB98">MY GIT</a><br />
 			</div>
 		</div>
 		<div class="column"></div>
@@ -47,12 +42,15 @@
 	export default {
 		async asyncData() {
 			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
-			console.log(Object.keys(petStat.data))
+            
             console.log(petStat.data.message)
+            console.log(petStat.data.status)
+            console.log(petStat.data.status2)
 			return {
 				tableStatus: petStat.data.message,
                 tableStatus2: petStat.data.status,
-                tableStatus3: petStat.data.message
+                tableStatus3: petStat.data.status2,
+                
 			};
 		},
 	};
