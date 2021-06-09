@@ -19,7 +19,7 @@
                     <th>패턴 변화</th>
 				</thead>
 				<tbody>
-					<template v-for="pos in tableStatus.length">
+					<template v-for="pos in tableStatusKey.length">
 						<tr :key="pos">
 							<td>{{ pos }}</td>
 							<td>{{ tableStatus[pos - 1].message }}</td>
@@ -42,7 +42,7 @@
 	export default {
 		async asyncData() {
 			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
-            
+             //alert(Object.keys(petStat));
             console.log(petStat.data.message)
             console.log(petStat.data.status)
             console.log(petStat.data.status2)
@@ -50,6 +50,7 @@
 				tableStatus: petStat.data.message,
                 tableStatus2: petStat.data.status,
                 tableStatus3: petStat.data.status2,
+                tableStatusKey: Object.Keys(petStat.data.message)
                 
 			};
 		},
