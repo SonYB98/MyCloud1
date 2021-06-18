@@ -20,7 +20,9 @@
 				<tbody>
 					<template v-for="pos in tableStatusKey.length">
 						<tr :key="pos">
-							<td>{{ img = tableStatus[pos - 1]}}</td>
+							<td>
+								<img id="img" v-bind:src="foodname"/>
+								{{ tableStatus[pos - 1]}}</td>
                             <td>{{ tableStatus2[pos - 1]}}</td>
                             <td>{{ tableStatus3[pos - 1]}}</td>	
 							<td>{{ tableStatus4[pos - 1]}}</td>								
@@ -40,15 +42,15 @@
 	import axios from 'axios';
 	export default {
 		async asyncData() {
-			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petFood.json');
+			const petFood = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petFood.json');
 			//alert(Object.keys(petStat));
-            console.log(Object.keys(petStat.data.foodname));
+            console.log(Object.keys(petFood.data.foodname));
 			return {
-				tableStatus: petStat.data.image,
-				tableStatus2: petStat.data.foodname,
-                tableStatusKey: Object.keys(petStat.data.foodname),
-                tableStatus3: petStat.data.material,
-                tableStatus4: petStat.data.price,               
+				tableStatus: petFood.data.image,
+				tableStatus2: petFood.data.foodname,
+                tableStatusKey: Object.keys(petFood.data.foodname),
+                tableStatus3: petFood.data.material,
+                tableStatus4: petFood.data.price,               
 			};
 		},
 	};

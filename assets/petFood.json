@@ -1,17 +1,18 @@
 {
     "image":[
-        "~assets/pfood/petfood (1).png",
-        "~assets/pfood/petfood (2).png",
-        "~assets/pfood/petfood (3).png",
-        "~assets/pfood/petfood (4).png",
-        "~assets/pfood/petfood (5).png",
-        "~assets/pfood/petfood (6).png",
-        "~assets/pfood/petfood (7).png",
-        "~assets/pfood/petfood (8).png",
-        "~assets/pfood/petfood (9).png",
-        "~assets/pfood/petfood (10).png",
-        "~assets/pfood/petfood (11).png",
-        "~assets/pfood/petfood (12).png"
+        "/petfood (1).png",
+        "/petfood (2).png",
+        "/petfood (3).png",
+        "/petfood (4).png",
+        "/petfood (5).png",
+        "/petfood (6).png",
+        "/petfood (7).png",
+        "/petfood (8).png",
+        "/petfood (9).png",
+        "/petfood (10).png",
+        "/petfood (11).png",
+        "/petfood (12).png"
+
     ],
     "foodname": [
         "채소 트릿",

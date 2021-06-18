@@ -1,12 +1,12 @@
 <template>
   <div>
-    <section class="hero is-link">
+    <section class="hero is-light">
       <div class="hero-body">
         <p class="title">
-          <i class="fas fa-dog"></i> 강아지와
-          <i class="fas fa-cat"></i> 고양이의 행동변화
+          <i class="fas fa-map-signs"></i> 대전에 있는 동물병원 찾기
+          
         </p>
-        <p class="subtile">애완동물의 행동에 따른 변화를 알아보자</p>
+        <p class="subtile">대전 지역에 있는 동물병원 위치를 간단히 체크하자</p>
       </div>
     </section>
     <hr />
@@ -53,8 +53,8 @@ export default {
       // Regular Map
       // const myLatlng = new google.maps.LatLng(40.748817, -73.985428);
       const myLatlng = new google.maps.LatLng(
-        37.28928696370265,
-        127.2048022021344
+        36.34397644068321, 
+        127.37407620541092
       );
       const mapOptions = {
         zoom: 15,
@@ -106,14 +106,13 @@ export default {
         ],
       };
       map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      
       locationRef.on("value", (snapshot) => {
         let newMaker = { lat: snapshot.val().lat, lng: snapshot.val().lng };
-        console.log(newMaker.lat);
-        console.log(newMaker.lng);
-        if (marker != null) marker.setMap(null);
+
         marker = new google.maps.Marker({
           position: newMaker,
-          title: "Lost Tag",
+          title: "hospital",
           icon: "https://cdn.glitch.com/37d9e42b-5b4d-4b17-9e77-c177a73cd5ec%2Fdasol.png?v=1621847826305",
         });
         marker.setMap(map);

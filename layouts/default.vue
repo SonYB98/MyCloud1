@@ -19,7 +19,11 @@
         </li>
 
         <li>
-          <nuxt-link to="/dogCatChart"><i class="fas fa-book-medical"></i>&nbsp;비용통계</nuxt-link>
+          <nuxt-link to="/dogCatChart"><i class="fas fa-chart-pie"></i>&nbsp;비용통계</nuxt-link>
+        </li>
+
+        <li>
+          <nuxt-link to="/dogCatMap"> <i class="fas fa-map-signs"></i>&nbsp;지도</nuxt-link>
         </li>
       </ul>
     </nav>
