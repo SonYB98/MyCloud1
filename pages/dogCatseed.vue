@@ -36,7 +36,7 @@
 				<tbody>
 					<template v-for="pos in tableStatusKey.length">
 						<tr :key="pos">
-							<td>{{ tableStatus[pos - 1]}}</td>
+							<td>{{ img = tableStatus[pos - 1]}}</td>
                             <td>{{ tableStatus2[pos - 1]}}</td>
                             <td>{{ tableStatus3[pos - 1]}}</td>	
 							<td>{{ tableStatus4[pos - 1]}}</td>								
