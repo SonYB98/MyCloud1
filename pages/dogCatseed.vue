@@ -12,16 +12,14 @@
 		<section class="columns">
 			<div class="column">
 				<article class="message is-primary">
-					<div class="message-header">오늘의 강아지</div>
+					<div class="message-header">오늘의 간식</div>
 					<div class="message-body">
 						<div class="content">
-							지금 나오는 강아지를 알아보세요.
-							<button class="button is-warning" @click="showDogName">
-								강아지 품종?
-							</button>
+							아래에서 간식의 정보를 찾아보세요
+						
 						</div>
 						<figure class="image container">
-							<img :src="dogImageUrl" alt="" />
+							<img :src="randfoodimg" alt="" />
 						</figure>
 					</div>
 				</article>
@@ -41,7 +39,7 @@
 							<td>{{ tableStatus[pos - 1]}}</td>
                             <td>{{ tableStatus2[pos - 1]}}</td>
                             <td>{{ tableStatus3[pos - 1]}}</td>	
-							<td>{{ tableStatus3[pos - 1]}}</td>								
+							<td>{{ tableStatus4[pos - 1]}}</td>								
 						</tr>
 					</template>
 				</tbody>
@@ -74,17 +72,35 @@
 			};
 		},
 		async asyncData() {
-			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
-            //alert(Object.keys(petStat));
-            console.log(Object.keys(petStat.data.message));
+			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petFood.json');
+            const randomImg = await axios.get(
+				'https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petFood.json'
+			);
+			//alert(Object.keys(petStat));
+            console.log(Object.keys(petStat.data.foodname));
 			return {
-				tableStatus: petStat.data.message,
-                tableStatusKey: Object.keys(petStat.data.message),
-                tableStatus2: petStat.data.status,
-                tableStatus3: petStat.data.status2
+				tableStatus: petStat.data.image,
+				tableStatus2: petStat.data.foodname,
+                tableStatusKey: Object.keys(petStat.data.foodname),
+                tableStatus3: petStat.data.material,
+                tableStatus4: petStat.data.price,
+
+				randfoodimg: randomImg.data.image,
                 
                 
 			};
-		}
+		},
+		methods: {
+			showDogName() {
+				let urlArray = this.randfoodimg.split('/');
+				let dogName = urlArray[urlArray.length - 2].toUpperCase();
+				alert('저는 ' + dogName + '입니다.');
+			},
+			submitDogName(dogName) {
+				this.$router.push(
+					'/PetFoodAll?' + this.dogNameField + '=' + dogName.toLowerCase()
+				);
+			},
+		},
 	};
 </script>
