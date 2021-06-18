@@ -1,17 +1,17 @@
 {
     "image":[
-        "/static/petfood (1).png",
-        "/static/petfood (2).png",
-        "/static/petfood (3).png",
-        "/static/petfood (4).png",
-        "/static/petfood (5).png",
-        "/static/petfood (6).png",
-        "/static/petfood (7).png",
-        "/static/petfood (8).png",
-        "/static/petfood (9).png",
-        "/static/petfood (10).png",
-        "/static/petfood (11).png",
-        "/static/petfood (12).png"
+        "/petfood (1).png",
+        "/petfood (2).png",
+        "/petfood (3).png",
+        "/petfood (4).png",
+        "/petfood (5).png",
+        "/petfood (6).png",
+        "/petfood (7).png",
+        "/petfood (8).png",
+        "/petfood (9).png",
+        "/petfood (10).png",
+        "/petfood (11).png",
+        "/petfood (12).png"
 
     ],
     "foodname": [
