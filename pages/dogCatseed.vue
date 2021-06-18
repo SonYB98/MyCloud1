@@ -9,22 +9,6 @@
 			</div>
 		</section>
 		<hr />
-		<section class="columns">
-			<div class="column">
-				<article class="message is-primary">
-					<div class="message-header">오늘의 간식</div>
-					<div class="message-body">
-						<div class="content">
-							아래에서 간식의 정보를 찾아보세요
-						
-						</div>
-						<figure class="image container">
-							<img :src="randfoodimg" alt="" />
-						</figure>
-					</div>
-				</article>
-			</div>
-		</section>
 		<div class="column">
 			<table class="table">
 				<thead>
@@ -55,27 +39,8 @@
 <script>
 	import axios from 'axios';
 	export default {
-		data() {
-			const colors = [
-				'is-white',
-				'is-primary',
-				'is-link',
-				'is-info',
-				'is-success',
-				'is-warning',
-				'is-danger',
-			];
-			return {
-				dogNameField: 'dogName',
-				colors: colors,
-				colorSize: colors.length,
-			};
-		},
 		async asyncData() {
 			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petFood.json');
-            const randomImg = await axios.get(
-				'https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petFood.json'
-			);
 			//alert(Object.keys(petStat));
             console.log(Object.keys(petStat.data.foodname));
 			return {
@@ -83,24 +48,8 @@
 				tableStatus2: petStat.data.foodname,
                 tableStatusKey: Object.keys(petStat.data.foodname),
                 tableStatus3: petStat.data.material,
-                tableStatus4: petStat.data.price,
-
-				randfoodimg: randomImg.data.image,
-                
-                
+                tableStatus4: petStat.data.price,               
 			};
-		},
-		methods: {
-			showDogName() {
-				let urlArray = this.randfoodimg.split('/');
-				let dogName = urlArray[urlArray.length - 2].toUpperCase();
-				alert('저는 ' + dogName + '입니다.');
-			},
-			submitDogName(dogName) {
-				this.$router.push(
-					'/PetFoodAll?' + this.dogNameField + '=' + dogName.toLowerCase()
-				);
-			},
 		},
 	};
 </script>
