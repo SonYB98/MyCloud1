@@ -2,9 +2,10 @@
 	<div>
 		<section class="hero is-warning">
 			<div class="hero-body">
-				<p class="title"><i class="fas fa-dog"></i> 애완동물 건강체크</p>
+				<p class="title">
+					<i class="fas fa-pills"></i> 애완동물 건강체크</p>
 				<p class="subtile">
-					애완동물의 상태를 간단하게 체크해봅시다.
+					애완동물의 상태를 간단하게 체크해보자
 				</p>
 			</div>
 		</section>

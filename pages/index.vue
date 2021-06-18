@@ -18,11 +18,11 @@
           <div class="message-body">
             <figure class="image is-256x256">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bulldog_adult_male.jpg/220px-Bulldog_adult_male.jpg"
+                src="~assets/dog.jpg"
                 alt=""
               />
             </figure>
-            강아지들에 대한 내용 , 건강상태체크
+            제가 키우는 강아지 사진입니다
           </div>
         </article>
         <article class="notification">
@@ -31,18 +31,18 @@
           >
             <thead>
               <tr>
-                <th>강아지가 주는 신호</th>
-                <th>행동내용</th>
+                <th>팁</th>
+                <th>견주를 위한 간단 팁!</th>
               </tr>
             </thead>
             <tbody>
               <tr class="is-selected">
-                <td>신호1</td>
-                <td>이러이러한 신호1를 준다는 내용</td>
+                <td>산책을 자주가자</td>
+                <td>강아지들의 건강을 위해 산책 겸 운동은 필수!</td>
               </tr>
               <tr>
-                <td>신호2</td>
-                <td>이러이러한 신호2를 준다는 내용</td>
+                <td>충분한 쉼터를 주자</td>
+                <td>강아지도 우리처럼 혼자만의 느긋함이 필요!</td>
               </tr>
             </tbody>
           </table>
@@ -56,9 +56,9 @@
           </div>
           <div class="message-body">
             <figure class="image is-256x256">
-              <img src="~assets/cat.jpeg" alt="" />
+              <img src="~assets/cat.jpg" alt="" />
             </figure>
-            고양이의 상태체크 내용
+            제가 키우는 고양이 사진입니다
           </div>
         </article>
         <article class="notification">
@@ -67,30 +67,22 @@
           >
             <thead>
               <tr>
-                <th>고양이가 주는 신호</th>
-                <th>행동내용</th>
+                <th>팁</th> 
+                <th>집사들을 위한 간단 팁!</th>
               </tr>
             </thead>
             <tbody>
               <tr class="is-selected">
-                <td>신호1</td>
-                <td>이러이러한 신호1를 준다는 내용</td>
+                <td>장난감으로 놀아주자</td>
+                <td>고양이들은 놀아주는걸 매우 좋아하니 운동겸 자주 놀아주자
+                </td>
               </tr>
               <tr>
-                <td>신호2</td>
-                <td>이러이러한 신호2를 준다는 내용</td>
+                <td>이해하려 하지말자 (필수)</td>
+                <td>원래 고양이는 이해가 불가능한 생명체이니 집안의 고양이 손이 닿는 물건은 전부 치우자</td>
               </tr>
             </tbody>
           </table>
-        </article>
-      </div>
-
-      <div class="column">
-        <article class="message">
-          <div class="message-header">
-            <p>임시3(아직 못정함)</p>
-          </div>
-          <div class="message-body">임시3에 대한 내용</div>
         </article>
       </div>
     </div>

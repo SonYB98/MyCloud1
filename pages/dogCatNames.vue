@@ -6,7 +6,7 @@
           <i class="fas fa-dog"></i> 강아지와
           <i class="fas fa-cat"></i> 고양이의 행동변화
         </p>
-        <p class="subtile">아직 어떻게 사용할지 몰라서 같은거로 했습니다.</p>
+        <p class="subtile">애완동물의 행동에 따른 변화를 알아보자</p>
       </div>
     </section>
     <hr />
