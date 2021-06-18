@@ -19,10 +19,8 @@
 				</thead>
 				<tbody>
 					<template v-for="pos in tableStatusKey.length">
-						<tr :key="pos">
-							<td>
-								<img id="img" v-bind:src="foodname"/>
-								{{ tableStatus[pos - 1]}}</td>
+						<tr :key="pos">			
+							<td><img src= {{ tableStatus[pos - 1]}}> </td>				
                             <td>{{ tableStatus2[pos - 1]}}</td>
                             <td>{{ tableStatus3[pos - 1]}}</td>	
 							<td>{{ tableStatus4[pos - 1]}}</td>								
