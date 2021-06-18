@@ -9,36 +9,82 @@
 			</div>
 		</section>
 		<hr />
-		<section class="box">
-			<form @submit.prevent="submitpetFood">
-				<div class="field">
-					<label class="label">건강식 찾기</label>
-					<div class="control">
-						<input type="text" v-model="petFood" />
-						<button class="button is-link" type="submit">검 색</button>
+		<section class="columns">
+			<div class="column">
+				<article class="message is-primary">
+					<div class="message-header">오늘의 강아지</div>
+					<div class="message-body">
+						<div class="content">
+							지금 나오는 강아지를 알아보세요.
+							<button class="button is-warning" @click="showDogName">
+								강아지 품종?
+							</button>
+						</div>
+						<figure class="image container">
+							<img :src="dogImageUrl" alt="" />
+						</figure>
 					</div>
-					<p class="help is-success">
-						알아보고 싶은 건강식을 찾아보자
-					</p>
-				</div>
-			</form>
+				</article>
+			</div>
 		</section>
+		<div class="column">
+			<table class="table">
+				<thead>
+					<th>사진</th>
+					<th>이름</th>
+                    <th>정보</th>
+					<td>가격</td>			
+				</thead>
+				<tbody>
+					<template v-for="pos in tableStatusKey.length">
+						<tr :key="pos">
+							<td>{{ tableStatus[pos - 1]}}</td>
+                            <td>{{ tableStatus2[pos - 1]}}</td>
+                            <td>{{ tableStatus3[pos - 1]}}</td>	
+							<td>{{ tableStatus3[pos - 1]}}</td>								
+						</tr>
+					</template>
+				</tbody>
+			</table>
+            <div class="content">
+				<p class="tag is-danger">출처</p>
+				<a href="https://github.com/SonYB98">MY GIT</a><br />
+			</div>
+		</div>
+		<div class="column"></div>
 	</div>
 </template>
 <script>
+	import axios from 'axios';
 	export default {
 		data() {
+			const colors = [
+				'is-white',
+				'is-primary',
+				'is-link',
+				'is-info',
+				'is-success',
+				'is-warning',
+				'is-danger',
+			];
 			return {
-				petFoodField: 'dogName',
-				petFood: null,
+				dogNameField: 'dogName',
+				colors: colors,
+				colorSize: colors.length,
 			};
 		},
-		methods: {
-			submitpetFood() {
-				this.$router.push(
-					'/PetFoodAll?' + this.petFoodField + '=' + this.petFood
-				);
-			},
-		},
+		async asyncData() {
+			const petStat = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petStat.json');
+            //alert(Object.keys(petStat));
+            console.log(Object.keys(petStat.data.message));
+			return {
+				tableStatus: petStat.data.message,
+                tableStatusKey: Object.keys(petStat.data.message),
+                tableStatus2: petStat.data.status,
+                tableStatus3: petStat.data.status2
+                
+                
+			};
+		}
 	};
 </script>
