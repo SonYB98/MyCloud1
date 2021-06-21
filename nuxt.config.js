@@ -59,4 +59,10 @@ module.exports = {
   plugins: [
 		{ src: '~/plugins/toastuiChart.js', mode: 'client' },
 	],
+  modules: [
+    ['nuxt-gmaps', {
+      key: 'AIzaSyDDXDdoYwn-bRRX0LseKP0C0EpRnIxa0M4',
+      //you can use libraries: ['places']
+    }]
+  ]
 };
