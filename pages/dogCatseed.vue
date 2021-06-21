@@ -18,12 +18,12 @@
 					<td>가격</td>			
 				</thead>
 				<tbody>
-					<template v-for="pos in tableStatusKey.length">
+					<template v-for="pos in tablefoodnameKey.length">
 						<tr :key="pos">			
-							<td><img src= {{ tableStatus[pos - 1]}}> </td>				
-                            <td>{{ tableStatus2[pos - 1]}}</td>
-                            <td>{{ tableStatus3[pos - 1]}}</td>	
-							<td>{{ tableStatus4[pos - 1]}}</td>								
+							<td><img src= {{ tableimage[pos - 1]}} width="50px" height="50px"> </td>				
+                            <td>{{ tablefoodname[pos - 1]}}</td>
+                            <td>{{ tablematerial[pos - 1]}}</td>	
+							<td>{{ tableprice[pos - 1]}}</td>								
 						</tr>
 					</template>
 				</tbody>
@@ -42,13 +42,12 @@
 		async asyncData() {
 			const petFood = await axios.get('https://raw.githubusercontent.com/SonYB98/MyCloud1/master/assets/petFood.json');
 			//alert(Object.keys(petStat));
-            console.log(Object.keys(petFood.data.foodname));
 			return {
-				tableStatus: petFood.data.image,
-				tableStatus2: petFood.data.foodname,
-                tableStatusKey: Object.keys(petFood.data.foodname),
-                tableStatus3: petFood.data.material,
-                tableStatus4: petFood.data.price,               
+				tableimage: petFood.data.image,
+				tablefoodname: petFood.data.foodname,
+                tablefoodnameKey: Object.keys(petFood.data.foodname),
+                tablematerial: petFood.data.material,
+                tableprice: petFood.data.price,               
 			};
 		},
 	};
