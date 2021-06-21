@@ -3,7 +3,7 @@
     <nav class="breadcrumb">
       <ul>
         <li>
-          <nuxt-link to="/"><i class="fas fa-home"></i>HOME</nuxt-link>
+          <nuxt-link to="/"><i class="fas fa-home"></i>메인화면</nuxt-link>
         </li>
 
          <li>
@@ -23,7 +23,7 @@
         </li>
 
         <li>
-          <nuxt-link to="/dogCatMap"> <i class="fas fa-map-signs"></i>&nbsp;지도</nuxt-link>
+          <nuxt-link to="/dogCatMap"> <i class="fas fa-map-signs"></i>&nbsp;병원찾기</nuxt-link>
         </li>
       </ul>
     </nav>

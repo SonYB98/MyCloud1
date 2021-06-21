@@ -54,7 +54,7 @@
 <script>
 	import toastuiChart from '~/plugins/toastuiChart';
 	let showChart = false;
-	const dogCaringMoney = {
+	const mypetMoney = {
 		categories: [
 			'5만원 미만',
 			'5~10만원',
@@ -78,7 +78,7 @@
 			},
 		],
 	};
-	const dogStartYear = {
+	const mypetYear = {
 		categories: ['연령대'],
 		series: [
 			{
@@ -113,8 +113,8 @@
 		},
 		mounted() {
 			if (!showChart && process.client) {
-				if (!toastuiChart('bar', 'lineChart', dogCaringMoney)) return;
-				if (!toastuiChart('pie', 'pieChart', dogStartYear)) return;
+				if (!toastuiChart('bar', 'lineChart', mypetMoney)) return;
+				if (!toastuiChart('pie', 'pieChart', mypetYear)) return;
 				showChart = true;
 			}
 		},

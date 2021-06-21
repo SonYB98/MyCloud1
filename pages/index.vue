@@ -16,7 +16,7 @@
             <p>강아지</p>
           </div>
           <div class="message-body">
-            <figure class="image is-256x256">
+            <figure class="image is-36x48">
               <img
                 src="~assets/dog.jpg"
                 alt=""
@@ -55,7 +55,7 @@
             <p>고양이</p>
           </div>
           <div class="message-body">
-            <figure class="image is-256x256">
+            <figure class="image is-108x144">
               <img src="~assets/cat.jpg" alt="" />
             </figure>
             제가 키우는 고양이 사진입니다
